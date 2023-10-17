@@ -1,0 +1,180 @@
+@charset "UTF-8";* { margin: 0; padding: 0; box-sizing: inherit; &:before,
+ &:after { box-sizing: inherit; } 
+ }
+
+body { background-color: #FCF9EE; font-size: 25px; font-family: 'Kotta One', serif; color: #151515; } 
+h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; } 
+ul,li { list-style: none; } 
+a { text-decoration: none; } 
+/* inherit - 부모의 글자색 상속 */
+a img { border:none; } 
+/* font-family: 'Inter', sans-serif; */
+/* font-family: 'Kotta One', serif; */
+/* font-family: 'Montaga', serif; */
+
+#wrap { width: 100%; } 
+
+/* ================================
+header
+=================================== */
+#wrap header { width: 100%; height: 90px; /* border-bottom: 1.5px solid #000; */
+ box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1); background-color: #FCF9EE; position: fixed; z-index: 2; } 
+
+#wrap header h1 { display: flex; justify-content: center; margin-top: 20px; } 
+
+/* ================================
+main
+=================================== */
+ 
+ .panels { min-height: 100vh; overflow: hidden; display: flex; } 
+ 
+ .panel { flex: 1; display: flex; flex-direction: column; justify-content: center; font-family: 'Montaga', serif; color:#FCF9EE; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); text-align: center; align-items: center; transition: font-size 0.1s ease-out, flex 0.3s ease-out, background 0.1s; position: relative; &:before,
+ &:after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; display: block; background-size: cover; background-position: center; transition: all 0.2s ease; } 
+ &:after { z-index: -1; } 
+ &.active { flex: 5; } 
+ }
+ 
+ .panel:hover { opacity: .8; } 
+
+ .panel1:after { background-image: url(../images/mv1.jpg); } 
+ 
+ .panel2:after { background-image: url(../images/mv2.jpg); } 
+ 
+ .panel3:after { background-image: url(../images/mv3.jpg); } 
+ 
+ .panel4:after { background-image: url(../images/mv4.jpg); } 
+ 
+ 
+ .panel { > * { margin: 0; width: 100%; transition: transform 0.5s; flex: 1 0 auto; display: flex; justify-content: center; align-items: center; &:first-child { transform: translateY(-100%); } 
+ }
+ &.open { > *:first-child,
+ > *:last-child { transform: translateY(0); } 
+ }
+ > *:last-child { transform: translateY(100%); } 
+ 
+ &.active { font-size: 40px; &:before { background: rgba(197, 197, 197, 0.74); backdrop-filter: blur(20px); } 
+ p:nth-child:after { opacity:0; } 
+ p:nth-child:before { opacity:1; } 
+ } 
+ }
+
+
+
+/* ================================
+Blossoms
+=================================== */
+
+section#Blossoms { width: 100%; } 
+
+.inner { width: 1400px; height: 100%; margin: 0 auto; text-align: center; } 
+
+section#Blossoms .inner .BlossomsCollection { animation: slideInUp; /* referring directly to the animation's @keyframe declaration */
+ animation-duration: 2s; } 
+
+
+section#Blossoms .inner .BlossomsCollection .box1 { width: 1400px; height: 10px; border-top: 1px solid #000; border-bottom: 1px solid#000; margin-top: 240px; margin-bottom:90px; position: relative; } 
+
+section#Blossoms .inner .BlossomsCollection h2 { font-size: 40px; padding-bottom: 35px; } 
+section#Blossoms .inner .BlossomsCollection .box2 { width: 1400px; height: 10px; border-top: 1px solid #000; border-bottom: 1px solid#000; margin-bottom: 240px; margin-top: 90px; position: relative; } 
+section#Blossoms .inner .BlossomsCollection .box1 img { position: absolute; left: -90px; top: -160px; width: 247px; height: 296px; } 
+
+section#Blossoms .inner .BlossomsCollection .box2 img { position: absolute; right:-90px; top: -150px; width: 201px; height: 266px; } 
+
+/* ================================
+Waterlily
+=================================== */
+.a_Waterlily { width: 100%; height: 626px; position: relative; margin: 300px 0; } 
+
+.a_Waterlily video { position: absolute; left: 0; } 
+
+.t_Waterlily h3 { position: absolute; top: -10px; left: 690px; font-size: 70px; font-family: 'Montaga', serif; font-weight: normal; } 
+
+.t_Waterlily p { width: 645px; position: absolute; top: 100px; left: 700px; text-align: justify; letter-spacing: -1px; line-height: 33px; } 
+
+.WaterlilyImg1 { position: absolute; right: 0; top: 0; height: 625px; } 
+.WaterlilyImg2 { position: absolute; right: 50px; bottom: -8px; } 
+.WaterlilyImg3 { position: absolute; right: 480px; bottom: 30px; } 
+
+
+/* ================================
+Nashi
+=================================== */
+.a_Nashi { width: 100%; height: 626px; position: relative; margin: 300px 0; } 
+
+.a_Nashi video { position: absolute; right: 0; } 
+
+.t_Nashi h3 { position: absolute; bottom: 190px; left: 0px; font-size: 70px; font-family: 'Montaga', serif; font-weight: normal; } 
+
+.t_Nashi p { width: 645px; position: absolute; bottom: 0px; left: 0px; text-align: justify; letter-spacing: -1px; line-height: 33px; } 
+
+.NashiImg1 { position: absolute; left: 0; top: 0; height: 625px; } 
+.NashiImg2 { position: absolute; left: 350px; top:200px; } 
+.NashiImg3 { position: absolute; left: 680px; top:-150px; } 
+
+/* ================================
+Osmanthus
+=================================== */
+.a_Osmanthus { width: 100%; height: 626px; position: relative; margin: 300px 0; } 
+
+.a_Osmanthus video { position: absolute; left: 0; } 
+
+.t_Osmanthus h3 { position: absolute; top: -10px; left: 690px; font-size: 70px; font-family: 'Montaga', serif; font-weight: normal; line-height: 70px; text-align-last: left; } 
+
+.t_Osmanthus p { width: 400px; position: absolute; top: 170px; left: 700px; text-align: justify; letter-spacing: -1px; line-height: 33px; } 
+
+.OsmanthusImg1 { position: absolute; right: 0; top: 0; height: 625px; } 
+.OsmanthusImg2 { position: absolute; right: 50px; bottom: -8px; } 
+.OsmanthusImg3 { position: absolute; right: 480px; bottom: 30px; } 
+
+
+/* ================================
+Magnolia
+=================================== */
+.a_Magnolia { width: 100%; height: 626px; position: relative; margin: 300px 0; } 
+
+.a_Magnolia video { position: absolute; right: 0; } 
+
+.t_Magnolia h3 { position: absolute; bottom: 190px; left: 60px; font-size: 70px; font-family: 'Montaga', serif; font-weight: normal; } 
+
+.t_Magnolia p { width: 645px; position: absolute; bottom: 0px; left: 60px; text-align: justify; letter-spacing: -1px; line-height: 33px; } 
+
+.MagnoliaImg1 { position: absolute; left: 0; top: 0; height: 625px; } 
+.MagnoliaImg2 { position: absolute; left: 60px; top:0px; } 
+.MagnoliaImg3 { position: absolute; left: 400px; top: 200px; } 
+
+
+/* ================================
+product
+=================================== */
+
+section#product .inner { width: 1550px; } 
+
+section#product .inner ul { width: 100%; display: flex; justify-content: space-between; margin: 90px 0 250px; } 
+
+section#product .inner ul li { width: 329px; height: 100%; display: block; text-align: center; font-family: 'Inter', sans-serif; } 
+section#product .inner ul li h4 { margin-top: 20px; font-weight: 500; letter-spacing: -1; color: #151515; } 
+
+section#product .inner ul li p { margin-bottom: 60px; margin-top: 15px; font-size: 15px; color: #151515; } 
+
+section#product .inner ul li .Quickshop { display: block; box-sizing: border-box; width: 250px; height: 60px; border-radius: 2px; border: 2px solid #B5DDE4; margin: 0 auto; padding: 15px; } 
+
+section#product .inner ul li .Quickshop span { display: block; font-size: 20px; color: #151515; font-weight: 500; } 
+section#product .inner ul li:nth-child(1) .Quickshop:hover { background: linear-gradient(90deg, #B5DDE4 2.59%, #E5DA8B 99.72%); border:0; padding: 17px; } 
+
+section#product .inner ul li:nth-child(2) .Quickshop { border: 2px solid #E5DA8B; } 
+section#product .inner ul li:nth-child(2) .Quickshop:hover { background: linear-gradient(90deg, #F8BD92 2.59%, #E5DA8B 99.72%); border:0; padding: 17px; } 
+
+section#product .inner ul li:nth-child(3) .Quickshop { border: 2px solid #FFC988; } 
+section#product .inner ul li:nth-child(3) .Quickshop:hover { background: linear-gradient(90deg, #E4ACEB 2.59%, #FFC988 99.72%); border:0; padding: 17px; } 
+
+
+section#product .inner ul li:nth-child(4) .Quickshop { border: 2px solid #e3b4e9; } 
+section#product .inner ul li:nth-child(4) .Quickshop:hover { background: linear-gradient(90deg, #93D5EA 2.59%, #e3b4e9 99.72%); border:0; padding: 17px; } 
+
+/* ================================
+footer
+=================================== */
+footer { width: 100%; height: 90px; background-color: #000; } 
+
+footer .copyright { display: flex; justify-content: center; } 
+footer .copyright p { color: #FCF9EE; font-size: 15px; line-height: 90px; font-family: 'Inter', sans-serif; font-weight: 100; } 
